@@ -1,0 +1,9 @@
+LASposition<-function(coordxT,coordxR,coordyT,coordyR){
+  d<-abs(coordyT-coordyR)/abs(coordxT-coordxR)
+  d<-as.fractions(d)
+  d<-strsplit(attr(d,"fracs"),"/")[[1]]
+  Py=as.numeric(d[1])
+  Px=as.numeric(d[2])
+  ps=c(Px,Py)
+  return(ps)
+}
